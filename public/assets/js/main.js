@@ -1,5 +1,11 @@
 // Initialisation de la bibliothèque AOS (Animate On Scroll)
 AOS.init({ duration: 700, once: false });
+// Dès que tout est chargé (images, CSS, scripts externes…), on signale la fin du preloading
+window.addEventListener('load', () => {
+  // Ajoute la classe pour déclencher la transition CSS
+  document.body.classList.add('loaded');
+});
+
 
 // Initialisation de Particles.js pour un fond animé interactif
 if (window.particlesJS) {

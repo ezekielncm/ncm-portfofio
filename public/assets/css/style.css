@@ -263,4 +263,42 @@ body.dark .proj-card {
   background: var(--primary);
   transition: width 3.2s ease-in-out;
 }
+/* === PRELOADER === */
+#preloader {
+  position: fixed;
+  inset: 0;                 /* top/right/bottom/left = 0 */
+  background: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.6s ease;
+}
+body.dark #preloader {
+  background: var(--dark-bg);
+}
 
+/* Spinner simple */
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid rgba(0,0,0,0.1);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Quand on a fini, on ajoutera .loaded sur <body> pour cacher le preloader */
+body.loaded #preloader {
+  opacity: 0;
+  pointer-events: none;
+}
+body.loaded #site-content {
+  visibility: visible;
+}
+#site-content{
+  visibility: hidden;
+}
