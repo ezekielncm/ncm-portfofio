@@ -1,5 +1,5 @@
 // Initialisation de la bibliothèque AOS (Animate On Scroll)
-AOS.init({ duration: 700, once: true });
+AOS.init({ duration: 700, once: false });
 
 // Initialisation de Particles.js pour un fond animé interactif
 if (window.particlesJS) {
@@ -113,3 +113,21 @@ if (footer) {
   const year = new Date().getFullYear();
   footer.innerHTML = footer.innerHTML.replace(/©\s*\d{4}/, `© ${year}`);
 }
+// Animation des barres de progression (reset à chaque scroll)
+const fills = document.querySelectorAll('.progress-fill');
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const fill = entry.target;
+    const percent = fill.getAttribute('data-percent');
+    if (entry.isIntersecting) {
+      // Animate vers la valeur cible
+      fill.style.width = percent + '%';
+    } else {
+      // Reset dès qu'on quitte la zone
+      fill.style.width = '0';
+    }
+  });
+}, { threshold: 0.6 });
+
+fills.forEach(f => barObserver.observe(f));
+
