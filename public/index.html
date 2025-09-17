@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>W.Ezekiel NACOULMA — Portfolio</title>
-    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="assets/images/logo.png"
+      type="image/x-icon"
+    />
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
@@ -27,189 +31,203 @@
     </div>
     <!-- Particules en fond -->
     <div id="particles-js"></div>
-    <div id="site-content" >
+    <div id="site-content">
+      <!-- Header & Navigation -->
+      <header class="header">
+        <nav class="nav container">
+          <a href="#accueil" class="logo">
+            <img
+              src="assets/images/logo.png"
+              alt="Logo W. Ezekiel Nacoulma"
+              class="logo-img"
+          /></a>
+          <ul class="nav-links">
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#parcours">Parcours</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="burger"><span></span><span></span><span></span></div>
+          <button id="theme-toggle" aria-label="Toggle Dark Mode">
+            <i class="fas fa-moon"></i>
+          </button>
+        </nav>
+      </header>
 
-    <!-- Header & Navigation -->
-    <header class="header">
-      <nav class="nav container">
-        <a href="#accueil" class="logo">
+      <!-- Section Accueil -->
+      <section id="accueil" class="hero container" data-aos="fade-in">
+        <div class="hero-content">
           <img
-            src="assets/images/logo.png"
-            alt="Logo W. Ezekiel Nacoulma"
-            class="logo-img"
-        /></a>
-        <ul class="nav-links">
-          <li><a href="#competences">Compétences</a></li>
-          <li><a href="#parcours">Parcours</a></li>
-          <li><a href="#projets">Projets</a></li>
-          <li><a href="#contact">Contact</a></li>
+            src="assets/images/photo.png"
+            alt="Photo de Ezekiel"
+            class="hero-img"
+            data-tilt
+            data-tilt-max="15"
+          />
+          <h1 data-aos="zoom-in">W.Ezekiel NACOULMA</h1>
+          <p data-aos="fade-up" data-aos-delay="200">
+            Étudiant en Technologie du Génie Informatique
+          </p>
+          <a
+            href="assets/pdf/cv_ezekielncm.pdf"
+            class="btn"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            >Télécharger mon CV</a
+          >
+        </div>
+      </section>
+
+      <!-- Section Compétences -->
+      <section
+        id="competences"
+        class="section container"
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-anchor-placement="top-center"
+      >
+        <h2 data-aos="fade-down">Compétences</h2>
+        <div class="grid">
+          <!-- exemples de cartes -->
+          <div class="card" data-tilt data-tilt-max="10">
+            <i class="fas fa-code fa-2x"></i>
+            <div class="progress-bar">
+              <div class="progress-fill" data-percent="90"></div>
+            </div>
+            <h3>Web / Front-end</h3>
+            <p>HTML, CSS, JavaScript, React</p>
+          </div>
+          <div class="card" data-tilt data-tilt-max="10">
+            <i class="fas fa-shield-alt fa-2x"></i>
+            <div class="progress-bar">
+              <div class="progress-fill" data-percent="5"></div>
+            </div>
+            <h3>Cybersécurité</h3>
+            <p>OWASP, Pentesting, Sécurité Réseau</p>
+          </div>
+          <!-- autres cartes… -->
+          <div class="card" data-tilt data-tilt-max="10">
+            <i class="fas fa-database fa-2x"></i>
+            <div class="progress-bar">
+              <div class="progress-fill" data-percent="90"></div>
+            </div>
+            <h3>Base de donnees / Back-end</h3>
+            <p>Oracle, Mysql, Access, Firebase</p>
+            <p>Laravel/PHP, Node.js</p>
+          </div>
+          <div class="card" data-tilt data-tilt-max="10">
+            <i class="fas fa-network-wired fa-2x"></i>
+            <div class="progress-bar">
+              <div class="progress-fill" data-percent="50"></div>
+            </div>
+            <h3>Reseaux et systemes</h3>
+            <p>Cisco packet tracer, UML</p>
+          </div>
+          <div class="card" data-tilt data-tilt-max="10">
+            <i class="fas fa-mobile-alt fa-2x"></i>
+            <div class="progress-bar">
+              <div class="progress-fill" data-percent="90"></div>
+            </div>
+            <h3>Developpement Mobile</h3>
+            <p>Flutter / Dart</p>
+          </div>
+          <div class="card" data-tilt data-tilt-max="10">
+            <i class="fas fa-desktop fa-2x"></i>
+            <div class="progress-bar">
+              <div class="progress-fill" data-percent="10"></div>
+            </div>
+            <h3>Developpement Bureau</h3>
+            <p>C/C++, Java object, Python, Pascal</p>
+            <p>Visual Basic</p>
+          </div>
+          <div class="card" data-tilt data-tilt-max="10">
+            <i class="fas fa-laptop-code fa-2x"></i>
+            <div class="progress-bar">
+              <div class="progress-fill" data-percent="90"></div>
+            </div>
+            <h3>Systemes d'exploitation</h3>
+            <p>Windows / Linux</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Parcours -->
+      <section id="parcours" class="section container timeline">
+        <h2 data-aos="fade-down">Parcours</h2>
+        <ul>
+          <li data-aos="fade-right">
+            <span class="date">oct 2023-juil 2026</span>
+            <h3>Licence - Technologie du Génie Informatique(IT) | Université Aube Nouvelle</h3>
+            <p>
+              Licence Informatique en Technologie du Génie Informatique à l'Université Aube Nouvelle
+            </p>
+          </li>
+          <li data-aos="fade-right">
+            <span class="date">juil 2025-oct 2025</span>
+            <h3>STAGE - Service Administration des Reseaux et gestion des Liaisons Special | Telecel SA Faso</h3>
+            <p>Immersion en entreprise pour perfectionnement</p>
+          </li>
+          <!-- autres étapes… -->
+          <li data-aos="fade-right">
+            <span class="date">oct 2020-juil 2023</span>
+            <h3>BACCALAUREAT - serie H | Lycee Technique National / ASL</h3>
+            <p>Obtention du baccalaureat serie H au lycee Technique National</p>
+          </li>
         </ul>
-        <div class="burger"><span></span><span></span><span></span></div>
-        <button id="theme-toggle" aria-label="Toggle Dark Mode">
-          <i class="fas fa-moon"></i>
-        </button>
-      </nav>
-    </header>
+      </section>
 
-    <!-- Section Accueil -->
-    <section id="accueil" class="hero container" data-aos="fade-in">
-      <div class="hero-content">
-        <img
-          src="assets/images/photo.png"
-          alt="Photo de Ezekiel"
-          class="hero-img"
-          data-tilt
-          data-tilt-max="15"
-        />
-        <h1 data-aos="zoom-in">W.Ezekiel NACOULMA</h1>
-        <p data-aos="fade-up" data-aos-delay="200">
-          Étudiant en Technologie du Génie Informatique
-        </p>
-        <a
-          href="assets/pdf/cv_ezekielncm.pdf"
-          class="btn"
-          data-aos="fade-up"
-          data-aos-delay="400"
-          >Télécharger mon CV</a
-        >
-      </div>
-    </section>
+      <!-- Section Projets -->
+      <section id="projets" class="section container">
+        <h2 data-aos="fade-down">Projets</h2>
+        <div class="grid" data-aos="zoom-in">
+          <div class="proj-card" data-tilt data-tilt-max="10">
+            <img src="assets/images/projet3.png" alt="Projet 3" width="100%" />
+            <div class="proj-info">
+              <h3>MedInfo Burkina</h3>
+              <p>
+                Systemes de Gestions des Dossiers Médicaux — Come 2 code – 2025
+              </p>
+            </div>
+          </div>
+          <div class="proj-card" data-tilt data-tilt-max="10">
+            <img src="assets/images/projet2.png" alt="Projet 2" width="100%" />
+            <div class="proj-info">
+              <h3>Projet Intégrateur L2</h3>
+              <p>
+                Site de Vente de Propriete — Université Aube Nouvelle – 2025
+              </p>
+            </div>
+          </div>
+          <div class="proj-card" data-tilt data-tilt-max="10">
+            <img src="assets/images/projet1.png" alt="Projet 1" width="100%" />
+            <div class="proj-info">
+              <h3>Projet Intégrateur L1</h3>
+              <p>
+                Site hôtelier + BDD Access — Université Aube Nouvelle – 2024
+              </p>
+            </div>
+          </div>
+          <!-- autres projets… -->
+        </div>
+      </section>
 
-    <!-- Section Compétences -->
-    <section
-      id="competences"
-      class="section container"
-      data-aos="fade-up"
-      data-aos-offset="200"
-      data-aos-anchor-placement="top-center"
-    >
-      <h2 data-aos="fade-down">Compétences</h2>
-      <div class="grid">
-        <!-- exemples de cartes -->
-        <div class="card" data-tilt data-tilt-max="10">
-          <i class="fas fa-code fa-2x"></i>
-          <div class="progress-bar">
-            <div class="progress-fill" data-percent="90"></div>
-          </div>
-          <h3>Web / Front-end</h3>
-          <p>HTML, CSS, JavaScript, React, Node.js</p>
+      <!-- Section Contact -->
+      <section id="contact" class="section container contact">
+        <h2 data-aos="fade-down">Contact</h2>
+        <div class="contact-methods" data-aos="fade-up" data-aos-delay="200">
+          <a href="mailto:mnacoulmaezekiel@gmail.com"
+            ><i class="fas fa-envelope"></i> mnacoulmaezekiel@gmail.com</a
+          >
+          <a rel="https://github.com/ezekielncm" target="_blank"
+            ><i class="fab fa-github"></i> github.com/ezekielncm</a
+          >
+          <p><i class="fas fa-phone"></i> (+226) 62070058</p>
         </div>
-        <div class="card" data-tilt data-tilt-max="10">
-          <i class="fas fa-shield-alt fa-2x"></i>
-          <div class="progress-bar">
-            <div class="progress-fill" data-percent="5"></div>
-          </div>
-          <h3>Cybersécurité</h3>
-          <p>OWASP, Pentesting, Sécurité Réseau</p>
-        </div>
-        <!-- autres cartes… -->
-        <div class="card" data-tilt data-tilt-max="10">
-          <i class="fas fa-database fa-2x"></i>
-          <div class="progress-bar">
-            <div class="progress-fill" data-percent="90"></div>
-          </div>
-          <h3>Base de donnees / Back-end</h3>
-          <p>Oracle, Mysql, Access</p>
-          <p>Laravel</p>
-        </div>
-        <div class="card" data-tilt data-tilt-max="10">
-          <i class="fas fa-network-wired fa-2x"></i>
-          <div class="progress-bar">
-            <div class="progress-fill" data-percent="50"></div>
-          </div>
-          <h3>Reseaux et systemes</h3>
-          <p>Cisco packet tracer, UML</p>
-        </div>
-        <div class="card" data-tilt data-tilt-max="10">
-          <i class="fas fa-mobile-alt fa-2x"></i>
-          <div class="progress-bar">
-            <div class="progress-fill" data-percent="90"></div>
-          </div>
-          <h3>Developpement Mobile</h3>
-          <p>Flutter / Dart</p>
-        </div>
-        <div class="card" data-tilt data-tilt-max="10">
-          <i class="fas fa-desktop fa-2x"></i>
-          <div class="progress-bar">
-            <div class="progress-fill" data-percent="10"></div>
-          </div>
-          <h3>Developpement Bureau</h3>
-          <p>C/C++, Java object, Python, Pascal</p>
-          <p>Visual Basic</p>
-        </div>
-        <div class="card" data-tilt data-tilt-max="10">
-          <i class="fas fa-laptop-code fa-2x"></i>
-          <div class="progress-bar">
-            <div class="progress-fill" data-percent="90"></div>
-          </div>
-          <h3>Systemes d'exploitation</h3>
-          <p>Windows / Linux</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Section Parcours -->
-    <section id="parcours" class="section container timeline">
-      <h2 data-aos="fade-down">Parcours</h2>
-      <ul>
-        <li data-aos="fade-right">
-          <span class="date">oct 2023-juil 2025</span>
-          <h3>Licence</h3>
-          <p>
-            Licence 2 - Technologie du Génie Informatique(IT) | Université Aube
-            Nouvelle
-          </p>
-          <p>
-            Licence 1 - Technologie du Génie Informatique(IT) | Université Aube
-            Nouvelle
-          </p>
-        </li>
-        <li data-aos="fade-right">
-          <span class="date">Juin–Juil 2024</span>
-          <h3>Projet Intégrateur</h3>
-          <p>Site hôtelier + BDD Access — Université Aube Nouvelle</p>
-        </li>
-        <!-- autres étapes… -->
-        <li data-aos="fade-right">
-          <span class="date">oct 2020-juil 2023</span>
-          <h3>BACCALAUREAT - serie H | Lycee Technique National / ASL</h3>
-          <p>Obtention du baccalaureat serie H au lycee Technique National</p>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Section Projets -->
-    <section id="projets" class="section container">
-      <h2 data-aos="fade-down">Projets</h2>
-      <div class="grid" data-aos="zoom-in">
-        <div class="proj-card" data-tilt data-tilt-max="10">
-          <img src="assets/images/projet1.png" alt="Projet 1" width="100%" />
-          <div class="proj-info">
-            <h3>Aftermovie Festival</h3>
-            <p>Sony Vegas Pro – 2022</p>
-          </div>
-        </div>
-        <!-- autres projets… -->
-      </div>
-    </section>
-
-    <!-- Section Contact -->
-    <section id="contact" class="section container contact">
-      <h2 data-aos="fade-down">Contact</h2>
-      <div class="contact-methods" data-aos="fade-up" data-aos-delay="200">
-        <a href="mailto:mnacoulmaezekiel@gmail.com"
-          ><i class="fas fa-envelope"></i> mnacoulmaezekiel@gmail.com</a
-        >
-        <a rel="https://github.com/ezekielncm" target="_blank"
-          ><i class="fab fa-github"></i> github.com/ezekielncm</a
-        >
-        <p><i class="fas fa-phone"></i> (+226) 62070058</p>
-      </div>
-    </section>
-
-    <footer class="section container" data-aos="fade-up">
-      © 2024 W.Ezekiel Nacoulma
-    </footer>
+      <footer class="section container" data-aos="fade-up">
+        © 2024 W.Ezekiel Nacoulma
+      </footer>
     </div>
 
     <!-- Librairies JS -->
