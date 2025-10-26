@@ -56,22 +56,23 @@ Portfolio professionnel présentant mes compétences, projets et expériences en
 
 ```
 portfolio/
-├── index.html                 # Page principale
-├── assets/
-│   ├── css/
-│   │   └── style.css         # Styles CSS
-│   ├── js/
-│   │   └── main.js           # JavaScript
-│   ├── images/
-│   │   ├── logo.png          # Logo
-│   │   ├── photo.png         # Photo de profil
-│   │   ├── projet1.png       # Captures projets
-│   │   ├── projet2.png
-│   │   └── projet3.png
-│   └── pdf/
-│       ├── cv_ezekielncm_fr.pdf    # CV Français
-│       ├── cv_ezekielncm_en.pdf    # CV Anglais
-│       └── portfolio.pdf            # Portfolio PDF
+├── public/
+│   ├── index.html                 # Page principale
+│   ├── assets/
+│   │   ├── css/
+│   │   │   └── style.css         # Styles CSS
+│   │   ├── js/
+│   │   │   └── main.js           # JavaScript
+│   │   ├── images/
+│   │   │   ├── logo.png          # Logo
+│   │   │   ├── photo.png         # Photo de profil
+│   │   │   ├── projet1.png       # Captures projets
+│   │   │   ├── projet2.png
+│   │   │   └── projet3.png
+│   │   └── pdf/
+│   │       ├── cv_ezekielncm_fr.pdf    # CV Français
+│   │       ├── cv_ezekielncm_en.pdf    # CV Anglais
+│   │       └── portfolio.pdf            # Portfolio PDF
 ├── README.md                 # Documentation
 └── .gitignore               # Fichiers ignorés
 ```
@@ -102,17 +103,17 @@ mkdir -p assets/css assets/js assets/images assets/pdf
 
 ### 4. Lancer le Site
 
-Ouvrez `index.html` dans votre navigateur ou utilisez un serveur local :
+Ouvrez `public/index.html` dans votre navigateur ou servez le dossier `public` avec un serveur local :
 
 ```bash
-# Avec Python
-python -m http.server 8000
+# Avec Python (serve `public`)
+python -m http.server 8000 --directory public
 
 # Avec Node.js (http-server)
-npx http-server
+npx http-server public
 
 # Avec PHP
-php -S localhost:8000
+php -S localhost:8000 -t public
 ```
 
 Accédez à `http://localhost:8000`

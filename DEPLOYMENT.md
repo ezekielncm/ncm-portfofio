@@ -61,6 +61,8 @@ git push -u origin main
 4. Cliquez sur **Save**
 5. Attendez 2-3 minutes
 
+> Remarque : si les fichiers de votre site sont dans un dossier `public/`, sélectionnez `Folder : /public` dans la configuration Pages (ou déplacez `index.html` à la racine du dépôt).
+
 ### Étape 5 : Accéder au Site
 
 Votre site sera disponible à :
@@ -112,8 +114,24 @@ CNAME   www     ezekielncm.github.io
 5. Configuration :
    - **Branch:** `main`
    - **Build command:** (laisser vide)
-   - **Publish directory:** (laisser vide ou `/`)
+  - **Publish directory:** `public`
 6. Cliquez sur **"Deploy site"**
+
+### Configurer le déploiement automatique (GitHub Actions)
+
+Si vous souhaitez déployer automatiquement à chaque push vers `main`, vous pouvez configurer une GitHub Action qui utilise le Netlify CLI. Pour que le workflow fonctionne, ajoutez ces secrets au dépôt (Settings → Secrets & variables → Actions) :
+
+- `NETLIFY_AUTH_TOKEN` : votre token personnel Netlify (Settings -> User -> Applications -> Personal access tokens)
+- `NETLIFY_SITE_ID` : l'ID du site Netlify (disponible dans Settings > Site information sur Netlify)
+
+Exemple d'étapes à suivre :
+
+1. Sur Netlify, allez dans votre site > Settings > Site information > Notez la valeur "Site ID".
+2. Dans GitHub, ouvrez votre dépôt → Settings → Secrets & variables → Actions → New repository secret.
+3. Créez `NETLIFY_AUTH_TOKEN` et `NETLIFY_SITE_ID` avec les valeurs correspondantes.
+4. Poussez vos modifications sur `main` — le workflow `.github/workflows/deploy-netlify.yml` (si présent) s'exécutera et déploiera le dossier `public/`.
+
+Le workflow peut également exécuter des étapes de build (minification des assets) et des vérifications rapides (accessibilité HTML) avant déploiement.
 
 ### Configuration
 
@@ -123,7 +141,7 @@ Créez un fichier `netlify.toml` à la racine :
 
 ```toml
 [build]
-  publish = "."
+  publish = "public"
   
 [[redirects]]
   from = "/*"
@@ -276,7 +294,7 @@ vercel --prod
 5. Configuration :
    - **Production branch:** `main`
    - **Build command:** (vide)
-   - **Build output:** `/`
+  - **Build output:** `public`
 6. **"Save and Deploy"**
 
 ### Configuration _headers

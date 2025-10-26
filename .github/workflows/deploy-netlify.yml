@@ -1,0 +1,57 @@
+name: Deploy to Netlify
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Netlify CLI + tooling
+        run: |
+          npm install -g netlify-cli csso-cli terser pa11y html-validator-cli http-server
+
+      - name: Minify CSS and JS
+        run: |
+          echo "Minifying CSS and JS in public/..."
+          if [ -f public/assets/css/style.css ]; then
+            csso public/assets/css/style.css --output public/assets/css/style.css
+          else
+            echo "Warning: public/assets/css/style.css not found"
+          fi
+          if [ -f public/assets/js/main.js ]; then
+            terser public/assets/js/main.js -c -m -o public/assets/js/main.js
+          else
+            echo "Warning: public/assets/js/main.js not found"
+          fi
+
+      - name: Run quick accessibility & HTML checks
+        run: |
+          echo "Starting static server on :8080"
+          npx http-server public -p 8080 &
+          SERVER_PID=$!
+          echo "Waiting for server to be ready..."
+          sleep 2
+          echo "Running pa11y accessibility check..."
+          pa11y http://127.0.0.1:8080 || true
+          echo "Running HTML validation..."
+          html-validator --file=public/index.html --verbose || true
+          echo "Stopping server"
+          kill $SERVER_PID || true
+
+      - name: Deploy to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          echo "Deploying public/ to Netlify site $NETLIFY_SITE_ID"
+          netlify deploy --dir=public --prod --site "$NETLIFY_SITE_ID"
