@@ -137,3 +137,26 @@ const barObserver = new IntersectionObserver((entries) => {
 
 fills.forEach(f => barObserver.observe(f));
 
+// Mise en surbrillance du lien de navigation actif au défilement
+const sections = document.querySelectorAll('section[id]');
+const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+
+function highlightNav() {
+  const scrollPos = window.scrollY + 100;
+  sections.forEach(section => {
+    const top = section.offsetTop;
+    const height = section.offsetHeight;
+    const id = section.getAttribute('id');
+    if (scrollPos >= top && scrollPos < top + height) {
+      navAnchors.forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href') === '#' + id) {
+          a.classList.add('active');
+        }
+      });
+    }
+  });
+}
+window.addEventListener('scroll', highlightNav);
+highlightNav();
+
