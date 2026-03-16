@@ -1,0 +1,154 @@
+# ===================================
+# Fichiers système
+# ===================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ===================================
+# Éditeurs de code
+# ===================================
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ===================================
+# Environnements de développement
+# ===================================
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# ===================================
+# Fichiers de build et dist
+# ===================================
+dist/
+build/
+*.min.css
+*.min.js
+*.map
+
+# ===================================
+# Fichiers temporaires
+# ===================================
+*.tmp
+*.temp
+*.log
+*.cache
+
+# ===================================
+# Fichiers de sauvegarde
+# ===================================
+*.bak
+*.backup
+*.old
+*_backup.*
+
+# ===================================
+# Fichiers sensibles
+# ===================================
+.env
+.env.local
+.env.*.local
+config.json
+secrets.json
+credentials.json
+
+# ===================================
+# Dossiers de test
+# ===================================
+test/
+tests/
+__tests__/
+coverage/
+.nyc_output/
+
+# ===================================
+# Documentation générée
+# ===================================
+docs/_build/
+site/
+
+# ===================================
+# Fichiers spécifiques au projet
+# ===================================
+# Fichiers PDF de CV (si vous ne voulez pas les versionner)
+# assets/pdf/*.pdf
+
+# Images de grande taille (décommenter si nécessaire)
+# assets/images/*.psd
+# assets/images/*.ai
+
+# Fichiers de développement
+dev/
+draft/
+scratch/
+
+# ===================================
+# Dépendances et packages
+# ===================================
+bower_components/
+jspm_packages/
+
+# ===================================
+# Fichiers de déploiement
+# ===================================
+.netlify/
+.vercel/
+.firebase/
+
+# ===================================
+# Logs
+# ===================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# ===================================
+# Divers
+# ===================================
+.sass-cache/
+.cache/
+.parcel-cache/

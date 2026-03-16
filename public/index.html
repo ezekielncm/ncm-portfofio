@@ -26,7 +26,6 @@
       href="assets/images/logo.png"
       type="image/x-icon"
     />
-    <!-- Google Fonts -->
     <link
       rel="preconnect"
       href="https://fonts.googleapis.com"
@@ -40,15 +39,29 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <!-- Font Awesome -->
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/logo.png"
     />
-    <!-- AOS pour animations -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <!-- CSS personnalisé -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/logo.png"
+    />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
   </head>
   <body>
     <!-- Preloader -->
@@ -78,18 +91,25 @@
           <button id="theme-toggle" aria-label="Toggle Dark Mode">
             <i class="fas fa-moon"></i>
           </button>
-        </nav>
-      </header>
+        </div>
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
 
-      <!-- Section Accueil -->
-      <section id="accueil" class="hero container" data-aos="fade-in">
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+      <div class="container">
         <div class="hero-content">
           <img
             src="assets/images/photo.png"
             alt="Photo de W. Ezekiel Nacoulma"
             class="hero-img"
-            data-tilt
-            data-tilt-max="15"
+            loading="lazy"
+            decoding="async"
           />
           <h1 data-aos="zoom-in">W.Ezekiel NACOULMA</h1>
           <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
@@ -126,6 +146,56 @@
             <div class="progress-bar">
               <div class="progress-fill" data-percent="75"></div>
             </div>
+          </div>
+          <div class="about-image">
+            <div class="about-img-wrapper">
+              <img
+                src="assets/images/photo.png"
+                alt="Ezekiel au travail"
+                sizes="(max-width: 500px) 100vw, 400px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Stats -->
+    <section id="stats" class="stats-section">
+      <div class="container">
+        <h2>En Chiffres</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <i class="fas fa-graduation-cap"></i>
+            <span class="counter" data-target="3">0</span>
+            <p>Années d'Études IT</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-project-diagram"></i>
+            <span class="counter" data-target="10">0</span>
+            <p>Projets Réalisés</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-code"></i>
+            <span class="counter" data-target="12">0</span>
+            <p>Technologies Maîtrisées</p>
+          </div>
+          <div class="stat-card">
+            <i class="fas fa-briefcase"></i>
+            <span class="counter" data-target="1">0</span>
+            <p>Stage Professionnel</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compétences Section -->
+    <section id="competences">
+      <div class="container">
+        <h2>Compétences</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <i class="fas fa-code"></i>
             <h3>Web / Front-end</h3>
             <p>HTML, CSS, JavaScript, Next.js</p>
           </div>
@@ -146,8 +216,10 @@
             <p>Oracle, Access, MongoDB, PostgreSQL</p>
             <p>C#/.Net, PHP</p>
           </div>
-          <div class="card" data-tilt data-tilt-max="10">
-            <i class="fas fa-network-wired fa-2x"></i>
+          <div class="skill-card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Systèmes d'exploitation</h3>
+            <p>Windows / Linux</p>
             <div class="progress-bar">
               <div class="progress-fill" data-percent="45"></div>
             </div>
@@ -162,8 +234,10 @@
             <h3>Outils &amp; DevOps</h3>
             <p>Git/GitHub, Docker, VS Code</p>
           </div>
-          <div class="card" data-tilt data-tilt-max="10">
-            <i class="fas fa-desktop fa-2x"></i>
+          <div class="skill-card">
+            <i class="fas fa-desktop"></i>
+            <h3>Développement Bureau</h3>
+            <p>C/C++, Java, Python, Pascal, Visual Basic</p>
             <div class="progress-bar">
               <div class="progress-fill" data-percent="80"></div>
             </div>
@@ -242,8 +316,27 @@
             <div class="proj-info">
               <h3>MedInfo Burkina</h3>
               <p>
-                Systemes de Gestions des Dossiers Médicaux — Come 2 code – 2025
+                Système de Gestion des Dossiers Médicaux pour faciliter la
+                gestion des patients dans les centres de santé.
               </p>
+              <div class="project-tech">
+                <span class="tech-tag">Laravel</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Bootstrap</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/ezekielncm/medinfo"
+                  target="_blank"
+                  class="project-link"
+                >
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="#" class="project-link">
+                  <i class="fas fa-external-link-alt"></i> Démo
+                </a>
+              </div>
+              <span class="project-year">2025</span>
             </div>
           </div>
           <div class="proj-card" data-tilt data-tilt-max="10">
@@ -251,8 +344,24 @@
             <div class="proj-info">
               <h3>Projet Intégrateur L2</h3>
               <p>
-                Site de Vente de Propriete — Université Aube Nouvelle – 2025
+                Plateforme de vente et location de propriétés immobilières avec
+                système de recherche avancée.
               </p>
+              <div class="project-tech">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">CSS3</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/ezekielncm/urbanhome"
+                  target="_blank"
+                  class="project-link"
+                >
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+              <span class="project-year">2025</span>
             </div>
           </div>
           <div class="proj-card" data-tilt data-tilt-max="10">
@@ -260,11 +369,26 @@
             <div class="proj-info">
               <h3>Projet Intégrateur L1</h3>
               <p>
-                Site hôtelier + BDD Access — Université Aube Nouvelle – 2024
+                Site web pour la gestion des réservations hôtelières avec base
+                de données Access intégrée.
               </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML/CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Access</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/ezekielncm"
+                  target="_blank"
+                  class="project-link"
+                >
+                  <i class="fab fa-github"></i> Code
+                </a>
+              </div>
+              <span class="project-year">2024</span>
             </div>
           </div>
-          <!-- autres projets… -->
         </div>
       </section>
 
