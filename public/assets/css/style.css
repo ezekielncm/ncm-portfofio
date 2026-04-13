@@ -322,6 +322,54 @@ body.dark .timeline li::before {
   padding: 0.5rem 0;
 }
 
+/* Icon-based project header */
+.proj-icon-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: 8px 8px 0 0;
+  margin: -1.5rem -1.5rem 0;
+}
+.proj-icon-header i {
+  color: #fff;
+}
+
+/* Project tags */
+.proj-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: rgba(118, 199, 192, 0.15);
+  color: var(--primary-dark);
+  border-radius: 12px;
+}
+body.dark .tag {
+  background: rgba(118, 199, 192, 0.2);
+  color: var(--primary);
+}
+
+/* GitHub button */
+.btn-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  background: #333;
+}
+.btn-github:hover {
+  background: #555;
+}
+
 /* Footer */
 footer {
   padding: 2rem 0;
