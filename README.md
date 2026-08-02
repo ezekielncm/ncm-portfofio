@@ -1,6 +1,8 @@
 # Portfolio — W. Ezekiel NACOULMA
 
-Portfolio personnel de **W. Ezekiel Nacoulma**, étudiant en Licence Technologie du Génie Informatique à l'Université Aube Nouvelle (Ouagadougou, Burkina Faso).
+Portfolio personnel de **W. Ezekiel Nacoulma**, ingénieur logiciel .NET / React — élève ingénieur en génie informatique à l'Université Aube Nouvelle (Ouagadougou, Burkina Faso).
+
+🌍 En ligne : [ezekielnacoulma.netlify.app](https://ezekielnacoulma.netlify.app/)
 
 ## 🌐 Aperçu
 
@@ -37,23 +39,25 @@ Aucune étape de build n'est nécessaire. Ouvrez simplement `public/index.html` 
 - **Mode sombre** — Bascule jour / nuit avec persistance (localStorage)
 - **Responsive** — Menu hamburger et grilles adaptatives
 - **Animations** — Particules, tilt 3D, barres de progression animées, AOS
-- **Sections** — Accueil · Compétences · Parcours · Diplômes · Projets · Contact
+- **Sections** — Accueil · Compétences · Parcours · Diplômes · Projets · Langues · Contact
 
 ## 🛠️ Compétences mises en avant
 
-- **Langages** : C#, Java, C/C++, Python, PHP, JavaScript
-- **Web / Front-end** : HTML, CSS, JavaScript, Next.js
-- **Base de données / Back-end** : Oracle, Access, MongoDB, PostgreSQL, C#/.Net, PHP
-- **Outils & DevOps** : Git/GitHub, Docker, VS Code
-- **Réseaux & Systèmes** : Windows, Linux, notions CCNA, UML
-- **Systèmes d'exploitation** : Windows, Linux
+- **Back-end** : C#, .NET 10 / ASP.NET Core, Entity Framework Core, API REST, Clean Architecture, CQRS
+- **Front-end** : React, TypeScript, TailwindCSS, Vite, Next.js
+- **Données** : PostgreSQL, MongoDB, Oracle, Qdrant (base vectorielle), MinIO
+- **DevOps** : Docker, Podman, Nginx, Git / GitHub Actions, Linux, Windows Server
+- **Sécurité** : OIDC, AD FS / Active Directory, JWT, RBAC, notions CCNA
+- **Autres** : Java, Python, PHP, SQL · Scrum, UML · Visual Studio, VS Code
 
 ## 📬 Contact
 
+- 📍 Ouagadougou, Burkina Faso
 - ✉️ mnacoulmaezekiel@gmail.com
-- 🐙 [github.com/ezekielncm](https://github.com/ezekielncm)
 - 📞 (+226) 07 47 83 18
+- 🐙 [github.com/ezekielncm](https://github.com/ezekielncm)
+- 💼 [linkedin.com/in/ezekiel-nacoulma](https://linkedin.com/in/ezekiel-nacoulma)
 
 ## 📄 Licence
 
-© 2024 W. Ezekiel Nacoulma — Tous droits réservés.
+© 2026 W. Ezekiel Nacoulma — Tous droits réservés.
