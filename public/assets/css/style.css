@@ -189,6 +189,18 @@ h1 {
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
 }
+.btn-outline {
+  background: transparent;
+  color: var(--primary-dark);
+  border: 2px solid var(--primary);
+}
+.btn-outline:hover {
+  background: var(--primary);
+  color: #fff;
+}
+body.dark .btn-outline {
+  color: var(--primary);
+}
 
 /* Sections */
 .section {
@@ -243,11 +255,11 @@ body.dark .proj-card {
 }
 
 /* Timeline */
-.timeline ul {
+.timeline > ul {
   list-style: none;
   position: relative;
 }
-.timeline ul::before {
+.timeline > ul::before {
   content: "";
   position: absolute;
   left: 32px;
@@ -256,12 +268,12 @@ body.dark .proj-card {
   width: 4px;
   background: var(--primary);
 }
-.timeline li {
+.timeline > ul > li {
   position: relative;
   margin-bottom: 3rem;
   padding-left: 4rem;
 }
-.timeline li::before {
+.timeline > ul > li::before {
   content: '';
   position: absolute;
   left: 24px;
@@ -272,7 +284,7 @@ body.dark .proj-card {
   background: var(--primary);
   border: 3px solid var(--light-bg);
 }
-body.dark .timeline li::before {
+body.dark .timeline > ul > li::before {
   border-color: var(--dark-bg);
 }
 .date {
@@ -280,6 +292,27 @@ body.dark .timeline li::before {
   color: var(--primary);
   display: block;
   margin-bottom: 0.5rem;
+}
+.timeline-subtitle {
+  font-style: italic;
+  opacity: 0.75;
+  margin: 0.35rem 0 0.6rem;
+}
+.timeline-details {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin: 0;
+}
+.timeline-details li {
+  margin-bottom: 0.4rem;
+  line-height: 1.55;
+  opacity: 0.9;
+}
+.timeline-details strong {
+  color: var(--primary-dark);
+}
+body.dark .timeline-details strong {
+  color: var(--primary);
 }
 
 /* Contact */
@@ -356,6 +389,21 @@ body.dark .timeline li::before {
 body.dark .tag {
   background: rgba(118, 199, 192, 0.2);
   color: var(--primary);
+}
+
+/* Note projet privé */
+.proj-note {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  opacity: 0.65;
+  font-style: italic;
+}
+
+/* Listes simples dans les cartes */
+.plain-list {
+  list-style: none;
+  margin-top: 0.5rem;
+  line-height: 1.8;
 }
 
 /* GitHub button */
